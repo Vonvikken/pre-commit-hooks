@@ -1,0 +1,7 @@
+- id: clean-requirements
+  name: Clean requirements
+  description: Remove unused or wrong entries from requirements.txt
+  entry: clean-requirements
+  language: python
+  files: requirements.*\.txt$
+  types: [text]
