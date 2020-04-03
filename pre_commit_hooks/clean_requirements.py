@@ -30,7 +30,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             new_lines = [line for line in lines if line.strip() not in excluded_entries]
             removed = len(lines) - len(new_lines)
             if removed > 0:
-                print(f"Removed {removed} entries from {filename}")
+                print(
+                    f"Removed {removed} {'entry' if removed == 1 else 'entries'} from {filename}"
+                )
                 ret = 1
             f.writelines(new_lines)
 
