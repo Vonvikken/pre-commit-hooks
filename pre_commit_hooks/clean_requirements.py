@@ -15,8 +15,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     )
     args = parser.parse_args(argv)
 
+    excluded_entries = EXCLUDED
+
     if args.excl is not None:
-        excluded_entries = EXCLUDED + args.excl
+        excluded_entries += args.excl
 
     ret = 0
 
