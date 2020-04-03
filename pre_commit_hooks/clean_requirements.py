@@ -14,7 +14,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         help="Additional entries to exclude",
     )
     args = parser.parse_args(argv)
-    excluded_entries = EXCLUDED + args.excl
+
+    if args.excl is not None:
+        excluded_entries = EXCLUDED + args.excl
 
     ret = 0
 
