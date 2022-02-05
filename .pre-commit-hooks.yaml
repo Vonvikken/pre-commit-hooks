@@ -5,3 +5,9 @@
   language: python
   files: requirements.*\.txt$
   types: [text]
+- id: no-telegram-tokens
+  name: No Telegram tokens
+  description: Detect whether potential Telegram bot tokens are committed by mistake
+  entry: no-telegram-tokens
+  language: python
+  types: [text]

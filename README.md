@@ -10,7 +10,24 @@ Pre-commit Git hooks I use in my internal projects.
 Works with Python 3.6 or newer. Can be used in conjunction with [pre-commit](https://github.com/pre-commit/pre-commit).
 
 ## Content
-So far, there's only one hook.
 
-- `clean-requirements`: Remove unused or wrong entries from requirements.txt. Used mainly to solve
-   [this bug](https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1635463).
+So far, there are the following hooks.
+
+### `clean-requirements`
+
+Remove unused or wrong entries from Pip requirements files.
+
+Written mainly to solve [this bug](https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1635463). By default, it
+looks for and removes the entry `pkg-resources==0.0.0` from any `requirements*.txt` file.
+
+#### Configuration options:
+
+- `--excluded-entries`: list of additional entries to exclude from the commit.
+
+### `no-telegram-tokens`
+
+Make sure that no Telegram bot tokens are committed.
+
+#### Configuration options:
+
+- `--excluded-files`: list of files to exclude from the check.

@@ -18,3 +18,4 @@ python = "^3.6"
 
 [tool.poetry.scripts]
 clean-requirements = "pre_commit_hooks.clean_requirements:main"
+no-telegram-tokens = "pre_commit_hooks.no_telegram_tokens:main"
