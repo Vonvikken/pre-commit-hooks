@@ -30,11 +30,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     ret = len(found)
     if ret > 0:
+        found_list = "\n".join(found)
         print(
-            """Potential Telegram bot tokens found in the following file{}:
-{}""".format(
-                "s" if ret > 1 else "", "\n".join(found)
-            )
+            f"""Potential Telegram bot tokens found in the following file{'s' if ret > 1 else ''}:
+{found_list}"""
         )
     return ret
 
